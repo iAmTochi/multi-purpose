@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa26d5d0-8e22-40ec-b6b8-fa0359045d88" name="Default Changelist" comment="" />
+    <list default="true" id="fa26d5d0-8e22-40ec-b6b8-fa0359045d88" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+            <state relative-caret-position="211">
+              <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#14701#14707#0#HTML" expanded="true" />
@@ -227,7 +229,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579362452329</updated>
-      <workItem from="1579362463139" duration="5097000" />
+      <workItem from="1579362463139" duration="6602000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1579367461175</created>
@@ -240,7 +242,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5097000" />
+    <option name="totallyTimeSpent" value="6602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="946" y="30" width="981" height="1057" extended-state="0" />
@@ -248,12 +250,12 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972856" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24972856" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32976446" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -332,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+        <state relative-caret-position="211">
+          <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#14701#14707#0#HTML" expanded="true" />
