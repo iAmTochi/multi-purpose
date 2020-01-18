@@ -21,7 +21,7 @@ $fa-font-path:  "../webfonts";
 
 .router-link-exact-active{
     z-index: 2;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #007bff;
     border-color: #007bff;
 }
