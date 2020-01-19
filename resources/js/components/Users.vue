@@ -120,7 +120,9 @@
                     .then(({data})=>(this.users = data.data))
             },
             createUser(){
+                this.$Progress.start();
                 this.form.post('api/user');
+                this.$Progress.finish()
             },
 
         },
