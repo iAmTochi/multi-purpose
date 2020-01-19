@@ -32,7 +32,7 @@
                                 <td>{{ user.created_at|myDate }}</td>
                                 <td class="align-content-around">
                                     <a href="#" class="float-left "><i class="fas fa-user-edit"></i></a>
-                                    <a href="#" class="float-right "><i class="fas fa-trash red"></i></a>
+                                    <a href="#" @click="deleteUser(user.id)" class="float-right "><i class="fas fa-trash red"></i></a>
                                 </td>
                             </tr>
                             </tbody>
@@ -115,6 +115,38 @@
             }
         },
         methods: {
+            deleteUser(id){
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.value) {                        //Send request to the server
+                        this.form.delete('api/user/' + id)
+                            .then(() => {
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                );
+                                Fire.$emit('afterCreateUser');
+
+                            })
+                            .catch(() => {
+                                Swal.fire(
+                                    'Failed!',
+                                    'There is something wrong.',
+                                    'warning'
+                                )
+                            });
+                    }
+
+                })
+            },
             loadUsers(){
                 axios.get("api/user")
                     .then(({data})=>(this.users = data.data))
