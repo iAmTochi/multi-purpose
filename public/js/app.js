@@ -1934,24 +1934,30 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     createUser: function createUser() {
+      var _this2 = this;
+
       this.$Progress.start();
-      this.form.post('api/user');
-      Fire.$emit('afterCreateUser');
-      $('#addNew').modal('hide');
-      toast.fire({
-        icon: 'success',
-        title: 'User Created successfully'
+      this.form.post('api/user').then(function () {
+        Fire.$emit('afterCreateUser');
+        $('#addNew').modal('hide');
+        toast.fire({
+          icon: 'success',
+          title: 'User Created successfully'
+        });
+
+        _this2.$Progress.finish();
+      })["catch"](function () {
+        _this2.$Progress.fail();
       });
-      this.$Progress.finish();
     }
   },
   name: "Profile",
   created: function created() {
-    var _this2 = this;
+    var _this3 = this;
 
     this.loadUsers();
     Fire.$on('afterCreateUser', function () {
-      _this2.loadUsers();
+      _this3.loadUsers();
     }); //setInterval(()=> this.loadUsers(), 3000)
   }
 });
