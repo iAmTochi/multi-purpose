@@ -38,25 +38,25 @@ Vue.component(AlertError.name, AlertError)
 
 
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 import VueProgressBar from 'vue-progressbar'
 Vue.use(VueProgressBar, {
     color: 'rgb(143, 255, 199)',
     failedColor: 'red',
     height: '3px'
-})
+});
 
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/users', component: require('./components/Users.vue').default },
-]
+];
 
 const router = new VueRouter({
     mode: 'history',
     routes // short for `routes: routes`
-})
+});
 
 
 Vue.filter('upText', function (text) {
@@ -65,7 +65,11 @@ Vue.filter('upText', function (text) {
 
 Vue.filter('myDate', function (created) {
     return moment().format('MMMM Do YYYY');
-})
+});
+
+
+
+window.Fire = new Vue();
 
 /**
  * The following block of code may be used to automatically register your
