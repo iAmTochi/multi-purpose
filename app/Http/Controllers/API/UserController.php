@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('api');
+        $this->middleware('auth:api');
     }
 
 
@@ -55,6 +55,29 @@ class UserController extends Controller
     }
 
     /**
+     *
+     */
+    public function updateProfile(Request $request)
+    {
+        $user = auth('api')->user();
+
+        if($request->photo){
+
+            $name = time().'.'. explode('/',explode(':',
+                    substr($request->photo, 0,
+                        strpos($request->photo, ';')))[1])[1];
+            \Image::make($request->photo)->save(public_path('img/profile/').$name);
+        }
+        return $request->photo;
+//        return ['message' => "Success"];
+    }
+
+    public function profile()
+    {
+        return auth('api')->user();
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -64,6 +87,8 @@ class UserController extends Controller
     {
         //
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -96,7 +121,6 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         //delete the users
-
         $user->delete();
 
         return ['message' => 'User Deleted'];
